@@ -1,0 +1,118 @@
+
+
+.nav-container{
+    height: 80px;
+    align-items: center;
+    background-color:white;
+    display: flex;
+    top: 0;
+    position: sticky;
+    z-index: 900;
+    
+}
+
+
+.logo{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    position: relative;
+    left: 30px;
+    bottom: 15px;
+}
+ .logo img{
+    height: 50px;
+    width: 80px;
+    margin-top: 15px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+.logo h5{
+    white-space: nowrap;
+    font-size: large;
+}
+.logo h5 span{
+    color: red;
+    
+}
+.hamburger{
+    padding: 20px;
+    border: none;
+    background-color: inherit;
+    display: none;
+    right: 10px;
+    position: absolute;
+}
+.center-navlinks{
+    display: flex;
+    flex: 3;
+    justify-content: end;
+}
+
+.center-navlinks button{
+    margin-right: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: large;
+}
+.left-navlinks{
+    display: flex;
+    flex: 3;
+}
+
+.left-navlinks input{
+    width: 100%;
+    padding: 15px;
+    font-size: large;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.left-navlinks .search{
+    margin-right: 30px;
+    padding: 10px;
+    background-color: inherit;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+}
+@media screen and (max-width: 900px ) {
+    .nav-container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .center-navlinks{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    .logocontainer{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .center-navlinks button{
+        width: 100%;
+        border-top: 1px solid rgba(0, 0, 0, 0.555);
+        text-align: center;
+        padding: 20px 0;
+    
+    }
+    
+    .left-navlinks{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.555);
+        padding-top: 20px;
+        padding-left: 30px;
+
+    }
+    .hamburger{
+        display: block;
+    }
+   
+}
