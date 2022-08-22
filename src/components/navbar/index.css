@@ -80,15 +80,17 @@
     .nav-container{
         display: flex;
         flex-direction: column;
-        height: auto;
-        background-color: black;
+        /* height: auto; */
     }
     .center-navlinks{
         display: flex;
         flex-direction: column;
         height: auto;
         width: 100%;
-        background-color:black;
+        background-color: white;
+    }
+    .left-navlinks{
+        background-color: white;
     }
     .logocontainer{
         display: flex;
