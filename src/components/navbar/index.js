@@ -3,6 +3,7 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -32,7 +33,10 @@ const Nav = () => {
 
         <div className="menuiconbutton">
           <button className="hamburger" onClick={toggleNav}>
-            <FontAwesomeIcon icon={faBars} style={{ height: "30px" }} />
+            <FontAwesomeIcon
+              icon={faBars}
+              style={{ height: "30px", color: "black" }}
+            />
           </button>
         </div>
       </div>
@@ -48,7 +52,7 @@ const Nav = () => {
           <div className="left-navlinks">
             <input type="text" placeholder="Search ...." />
             <button className="search">
-              <FontAwesomeIcon icon={faSearch} />
+              <FontAwesomeIcon icon={faSearch} style={{ color: "black" }} />
             </button>
           </div>
         </>

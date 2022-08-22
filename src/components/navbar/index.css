@@ -55,6 +55,7 @@
     border: none;
     background-color: inherit;
     font-size: large;
+    color: black;
 }
 .left-navlinks{
     display: flex;
