@@ -59,6 +59,10 @@
 font-size: 1.3rem;
 font-weight:bolder;
  }
+ .hero-container{
+    z-index: -2;
+  }
+ 
 }
 
 @media screen and (max-width: 768px) {
@@ -78,5 +82,8 @@ font-weight:bolder;
 
   .btn {
     width: 100%;
+  }
+  .hero-container{
+    z-index: -2;
   }
 }
