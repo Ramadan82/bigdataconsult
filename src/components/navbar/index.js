@@ -34,7 +34,7 @@ const Nav = () => {
           <button className="hamburger" onClick={toggleNav}>
             <FontAwesomeIcon
               icon={faBars}
-              style={{ height: "30px", color: "black" }}
+              style={{ height: "30px", color: "darkred" }}
             />
           </button>
         </div>
@@ -51,7 +51,7 @@ const Nav = () => {
           <div className="left-navlinks">
             <input type="text" placeholder="Search ...." />
             <button className="search">
-              <FontAwesomeIcon icon={faSearch} style={{ color: "black" }} />
+              <FontAwesomeIcon icon={faSearch} style={{ color: "darkred" }} />
             </button>
           </div>
         </>
