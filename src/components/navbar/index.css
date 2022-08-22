@@ -7,7 +7,7 @@
     display: flex;
     top: 0;
     position: sticky;
-    z-index: -1;
+    z-index: 9;
     
 }
 
@@ -87,6 +87,8 @@
         flex-direction: column;
         height: auto;
         width: 100%;
+        
+
     }
     .logocontainer{
         display: flex;
