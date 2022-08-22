@@ -7,7 +7,7 @@ import Typed from "react-typed";
 function HeroSection() {
   return (
     <div className="hero-container">
-      <img src="images/image3.jpg" alt="header" />
+      {/* <img src="images/image3.jpg" alt="header" /> */}
       <h1>Need Reliable Service Solutions?</h1>
       <p>What are you waiting for?</p>
       <div className="hero-btns">
