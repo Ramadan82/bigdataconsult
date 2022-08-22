@@ -29,7 +29,12 @@ function HeroSection() {
       </div>
       <Typed
         className="typed-text"
-        strings={["CONSULTANCY SERVICES", "DATA SERVICES", "TRAINING SERVICES"]}
+        strings={[
+          "CONSULTANCY SERVICES",
+          "DATA SERVICES",
+          "TRAINING SERVICES",
+          "OTHER SERVICES",
+        ]}
         typeSpeed={150}
         backSpeed={150}
         loop
