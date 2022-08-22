@@ -46,7 +46,7 @@
    position: absolute;
    height: 100vh;
    width: 100vw;
-   z-index: 12;
+   z-index: 1;
  }
  .tsparticles canvas{
   transition: 0.2s all ease-in-out;
