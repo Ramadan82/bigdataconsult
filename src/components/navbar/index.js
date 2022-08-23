@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 
 const Nav = () => {
@@ -33,7 +33,7 @@ const Nav = () => {
         <div className="menuiconbutton">
           <button className="hamburger" onClick={toggleNav}>
             <FontAwesomeIcon
-              icon={faBars}
+              icon={!toggle ? faBars : faTimes}
               style={{ height: "30px", color: "darkred" }}
             />
           </button>
