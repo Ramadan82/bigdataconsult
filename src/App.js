@@ -9,16 +9,14 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Services from "./components/pages/Services";
-import Products from "./components/pages/Products";
+import Contact from "./components/pages/Contact";
 import SignUp from "./components/pages/SignUp";
+import Login from "./components/pages/Login";
+import About from "./components/pages/About";
 
 function App() {
   const particlesInit = async (main) => {
     console.log(main);
-
-    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(main);
   };
   return (
@@ -33,8 +31,10 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/services" component={Services} />
-          <Route path="/products" component={Products} />
-          <Route path="/sign-up" component={SignUp} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/register" component={SignUp} />
+          <Route path="/login" component={Login} />
+          <Route path="/about" component={About} />
         </Switch>
       </Router>
     </>

@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -30,16 +31,18 @@ const Nav = () => {
     >
       <div className="logocontainer">
         <div className="logo">
-          <img src="images/bigdataconsult.png" alt="logo" />
-          <h5>
-            Consult <span>Limited</span>
-          </h5>
+          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+            <img src="images/bigdataconsult.png" alt="logo" />
+            <h5>
+              Consult <span>Limited</span>
+            </h5>
+          </Link>
         </div>
 
         <div className="menuiconbutton">
           <button
             className="hamburger"
-            onClick={toggleNav}
+            onClick={screenwidth < 900 && toggleNav}
             animate={toggle ? { z: 360 } : { z: -360 }}
             transition={{ duration: 3 }}
           >
@@ -57,36 +60,66 @@ const Nav = () => {
               initial={toggle ? { x: "100vw" } : { x: 0 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
+              onClick={screenwidth < 900 && toggleNav}
             >
-              Services
+              <Link
+                to="/services"
+                style={{ textDecoration: "none", color: "darkred" }}
+              >
+                Services
+              </Link>
             </motion.button>
             <motion.button
               initial={toggle ? { x: "-100vw" } : { x: 0 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
+              onClick={screenwidth < 900 && toggleNav}
             >
-              Contact
+              <Link
+                to="/contact"
+                style={{ textDecoration: "none", color: "darkred" }}
+              >
+                Contact
+              </Link>
             </motion.button>
             <motion.button
               initial={toggle ? { x: "100vw" } : { x: 0 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
+              onClick={screenwidth < 900 && toggleNav}
             >
-              About
+              <Link
+                to="/about"
+                style={{ textDecoration: "none", color: "darkred" }}
+              >
+                About
+              </Link>
             </motion.button>
             <motion.button
               initial={toggle ? { x: "-100vw" } : { x: 0 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
+              onClick={screenwidth < 900 && toggleNav}
             >
-              Register
+              <Link
+                to="/register"
+                style={{ textDecoration: "none", color: "darkred" }}
+              >
+                Register
+              </Link>
             </motion.button>
             <motion.button
               initial={toggle ? { x: "100vw" } : { x: 0 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
+              onClick={screenwidth < 900 && toggleNav}
             >
-              login
+              <Link
+                to="/login"
+                style={{ textDecoration: "none", color: "darkred" }}
+              >
+                login
+              </Link>
             </motion.button>
           </div>
           <div className="left-navlinks">
@@ -102,6 +135,7 @@ const Nav = () => {
               initial={toggle ? { x: "100vw" } : { x: 0 }}
               animate={{ x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
+              onClick={screenwidth < 900 && toggleNav}
             >
               <FontAwesomeIcon icon={faSearch} style={{ color: "darkred" }} />
             </motion.button>
