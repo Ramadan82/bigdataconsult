@@ -3,6 +3,7 @@ import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
@@ -21,7 +22,12 @@ const Nav = () => {
   }, []);
 
   return (
-    <div className="nav-container">
+    <motion.div
+      className="nav-container"
+      initial={{ height: 80 }}
+      animate={toggle ? { height: 500 } : { height: 80 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="logocontainer">
         <div className="logo">
           <img src="images/bigdataconsult.png" alt="logo" />
@@ -31,7 +37,12 @@ const Nav = () => {
         </div>
 
         <div className="menuiconbutton">
-          <button className="hamburger" onClick={toggleNav}>
+          <button
+            className="hamburger"
+            onClick={toggleNav}
+            animate={toggle ? { z: 360 } : { z: -360 }}
+            transition={{ duration: 3 }}
+          >
             <FontAwesomeIcon
               icon={!toggle ? faBars : faTimes}
               style={{ height: "30px", color: "darkred" }}
@@ -42,21 +53,62 @@ const Nav = () => {
       {(toggle || screenwidth > 900) && (
         <>
           <div className="center-navlinks">
-            <button>Services</button>
-            <button>Contact</button>
-            <button>About</button>
-            <button>Register</button>
-            <button>login</button>
+            <motion.button
+              initial={toggle ? { x: "100vw" } : { x: 0 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              Services
+            </motion.button>
+            <motion.button
+              initial={toggle ? { x: "-100vw" } : { x: 0 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              Contact
+            </motion.button>
+            <motion.button
+              initial={toggle ? { x: "100vw" } : { x: 0 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              About
+            </motion.button>
+            <motion.button
+              initial={toggle ? { x: "-100vw" } : { x: 0 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              Register
+            </motion.button>
+            <motion.button
+              initial={toggle ? { x: "100vw" } : { x: 0 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
+              login
+            </motion.button>
           </div>
           <div className="left-navlinks">
-            <input type="text" placeholder="Search ...." />
-            <button className="search">
+            <motion.input
+              type="text"
+              placeholder="Search ...."
+              initial={toggle ? { x: "-100vw" } : { x: 0 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            />
+            <motion.button
+              className="search"
+              initial={toggle ? { x: "100vw" } : { x: 0 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
               <FontAwesomeIcon icon={faSearch} style={{ color: "darkred" }} />
-            </button>
+            </motion.button>
           </div>
         </>
       )}
-    </div>
+    </motion.div>
   );
 };
 
