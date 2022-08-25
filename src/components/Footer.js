@@ -5,7 +5,10 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className="footer-container">
+    <div
+      className="footer-container"
+      style={{ zIndex: 3, position: "relative" }}
+    >
       <section className="footer-subscription">
         <p className="footer-subscription-heading">
           Join the BigData Consult newsletter to get updates on our best deals

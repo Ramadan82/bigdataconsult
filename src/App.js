@@ -13,6 +13,7 @@ import Contact from "./components/pages/Contact";
 import SignUp from "./components/pages/SignUp";
 import Login from "./components/pages/Login";
 import About from "./components/pages/About";
+import Footer from "../src/components/Footer";
 
 function App() {
   const particlesInit = async (main) => {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/about" component={About} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );

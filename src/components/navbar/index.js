@@ -26,7 +26,7 @@ const Nav = () => {
     <motion.div
       className="nav-container"
       initial={{ height: 80 }}
-      animate={toggle ? { height: 500 } : { height: 80 }}
+      animate={toggle ? { height: 600 } : { height: 80 }}
       transition={{ duration: 0.5 }}
     >
       <div className="logocontainer">
@@ -56,6 +56,16 @@ const Nav = () => {
       {(toggle || screenwidth > 900) && (
         <>
           <div className="center-navlinks">
+            <motion.button
+              initial={toggle ? { x: "-100vw" } : { x: 0 }}
+              animate={{ x: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              onClick={screenwidth < 900 && toggleNav}
+            >
+              <Link to="/" style={{ textDecoration: "none", color: "darkred" }}>
+                Home
+              </Link>
+            </motion.button>
             <motion.button
               initial={toggle ? { x: "100vw" } : { x: 0 }}
               animate={{ x: 0 }}
