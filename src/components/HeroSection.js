@@ -11,21 +11,44 @@ function HeroSection() {
       <h1>Need Reliable Service Solutions?</h1>
       <p>What are you waiting for?</p>
       <div className="hero-btns">
-        <Button
+        {/* <Button
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--large"
+        >
+          {" "}
+          GET STARTED{" "}
+        </Button> */}
+        <button
+          style={{
+            backgroundColor: "transparent",
+            color: "#fff",
+            padding: "8px 20px",
+            border: "1px solid #fff",
+            transition: "all 0.3s ease-out",
+          }}
         >
           GET STARTED
-        </Button>
-        <Button
+        </button>
+        {/* <Button
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--large"
-          onClick={console.log("hey")}
         >
-          CHAT WITH US <i className="btns" />
-        </Button>
+          CHAT WITH US
+          <i className="btns" />
+        </Button> */}
+        <button
+          style={{
+            backgroundColor: "transparent",
+            color: "#fff",
+            padding: "8px 20px",
+            border: "1px solid #fff",
+            transition: "all 0.3s ease-out",
+          }}
+        >
+          CHAT WITH US
+        </button>
       </div>
       <Typed
         className="typed-text"

@@ -69,6 +69,7 @@ h1 {
   color: #fff;
   background-color: darkred;
   box-sizing: border-box;
+  white-space: nowrap;
 }
 
 .cards__item__img {
