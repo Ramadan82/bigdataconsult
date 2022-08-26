@@ -22,7 +22,7 @@
 .hero-container > h1 {
   color: #fff;
   font-size: 7vmin;
-  margin-top: -100px;
+  margin-top: 150px;
  
 }
 
@@ -85,6 +85,10 @@ font-weight:bolder;
 
   .btn {
     width: 100%;
-  }
   
+  }
+  .hero-btns{
+    margin-right: 15px;
+    margin-top: 10px;
+  }
 }

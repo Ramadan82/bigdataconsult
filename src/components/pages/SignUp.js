@@ -75,9 +75,15 @@ function Login() {
 
             <div className="d-flex flex-row align-items-center justify-content-center pb-4 mb-4">
               <p className="mb-0">Already have an account?</p>
-              <MDBBtn outline className="mx-2" style={{ color: "darkred" }}>
-                <Link to="/login">Login Now</Link>
-              </MDBBtn>
+              <Link to="/login">
+                <MDBBtn
+                  outline
+                  className="mx-2"
+                  style={{ color: "darkred", border: "1px solid darkred" }}
+                >
+                  Login Now
+                </MDBBtn>
+              </Link>
             </div>
           </div>
         </MDBCol>

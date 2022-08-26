@@ -1,51 +1,46 @@
 import React from "react";
 import "../App.css";
-import { Button } from "./Button";
 import "./HeroSection.css";
 import Typed from "react-typed";
-
+import { useHistory } from "react-router-dom";
 function HeroSection() {
+  let history = useHistory();
   return (
     <div className="hero-container">
       {/* <img src="images/image3.jpg" alt="header" /> */}
       <h1>Need Reliable Service Solutions?</h1>
       <p>What are you waiting for?</p>
       <div className="hero-btns">
-        {/* <Button
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-        >
-          {" "}
-          GET STARTED{" "}
-        </Button> */}
         <button
+          className="btn"
           style={{
             backgroundColor: "transparent",
             color: "#fff",
-            padding: "8px 20px",
+            padding: "12px 26px",
             border: "1px solid #fff",
+            fontSize: "20px",
             transition: "all 0.3s ease-out",
+            zIndex: 9,
+            position: "relative",
           }}
+          onClick={() => history.push("/register")}
         >
           GET STARTED
         </button>
-        {/* <Button
-          className="btns"
-          buttonStyle="btn--outline"
-          buttonSize="btn--large"
-        >
-          CHAT WITH US
-          <i className="btns" />
-        </Button> */}
+
         <button
+          className="btn"
           style={{
             backgroundColor: "transparent",
             color: "#fff",
-            padding: "8px 20px",
+            padding: "12px 26px",
             border: "1px solid #fff",
+            fontSize: "20px",
             transition: "all 0.3s ease-out",
+            zIndex: 9,
+            position: "relative",
           }}
+          onClick={() => history.push("/contact")}
         >
           CHAT WITH US
         </button>

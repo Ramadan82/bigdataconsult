@@ -1,9 +1,10 @@
 import React from "react";
 import "./Footer.css";
-import { Button } from "./Button";
-import { Link } from "react-router-dom";
+// import { Button } from "./Button";
+import { Link, useHistory } from "react-router-dom";
 
 function Footer() {
+  const history = useHistory();
   return (
     <div
       className="footer-container"
@@ -24,7 +25,22 @@ function Footer() {
               type="email"
               placeholder="Your Email"
             />
-            <Button buttonStyle="btn--outline">Subscribe</Button>
+            {/* <Button buttonStyle="btn--outline">Subscribe</Button> */}
+            <button
+              className="btn"
+              style={{
+                backgroundColor: "transparent",
+                color: "#fff",
+                padding: "8px 20px",
+                border: "1px solid #fff",
+                fontSize: "20px",
+                transition: "all 0.3s ease-out",
+                marginBottom: "16px",
+              }}
+              onClick={() => history.push("/register")}
+            >
+              SUBSCRIBE
+            </button>
           </form>
         </div>
       </section>

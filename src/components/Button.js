@@ -12,7 +12,6 @@
 
 import React from "react";
 import "./Button.css";
-import { Link } from "react-router-dom";
 
 const STYLES = ["btn--primary", "btn--outline", "btn--test"];
 
@@ -30,7 +29,7 @@ export const Button = ({ children, type, buttonStyle, buttonSize }) => {
       className={`btn ${checkButtonStyle} ${checkButtonSize}`}
       type={type}
     >
-      <Link to="/register"> {children} </Link>
+      {children}
     </button>
   );
 };

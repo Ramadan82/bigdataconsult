@@ -12,13 +12,13 @@ function Cards() {
             <CardItem
               src="images/image9.jpg"
               text="Providing consultancy services to both private and goverment institutions and agencies"
-              label="Consultancy Services"
+              label="Consultancy"
               path="/services"
             />
             <CardItem
               src="images/image1.jpg"
               text="Generating accurate, reliable, and verifiable data for diverse groups of users"
-              label="Data Services"
+              label="Data "
               path="/services"
             />
           </ul>
@@ -26,7 +26,7 @@ function Cards() {
             <CardItem
               src="images/image8.jpg"
               text="Training and skills development in many areas of business such as finance, economics and IT"
-              label="Training Services"
+              label="Training"
               path="/services"
             />
             <CardItem

@@ -121,7 +121,8 @@ export default function Contact() {
               <li>
                 <i class="fas fa-map-marker-alt fa-2x"></i>
                 <p>
-                  Office: No. 96Mohammed Mustapha Way Jimeta/Yola, Adamawa State
+                  Office: No. 96 Mohammed Mustapha Way Jimeta/Yola, Adamawa
+                  State
                 </p>
               </li>
 
