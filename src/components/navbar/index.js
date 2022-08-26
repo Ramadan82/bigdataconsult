@@ -26,7 +26,7 @@ const Nav = () => {
     <motion.div
       className="nav-container"
       initial={{ height: 80 }}
-      animate={toggle ? { height: 600 } : { height: 80 }}
+      animate={toggle ? { height: 600, y: 0 } : { height: 80 }}
       transition={{ duration: 0.5 }}
     >
       <div className="logocontainer">
