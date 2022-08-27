@@ -8,7 +8,7 @@ function Footer() {
   return (
     <div
       className="footer-container"
-      style={{ zIndex: 3, position: "relative" }}
+      style={{ zIndex: 6, position: "relative" }}
     >
       <section className="footer-subscription">
         <p className="footer-subscription-heading">

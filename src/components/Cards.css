@@ -98,6 +98,7 @@ h1 {
   color: #252e48;
   font-size: 4vmin;
   text-align:start;
+  font-weight: normal;
   
 }
 
@@ -118,3 +119,4 @@ h1 {
     margin-bottom: 2rem;
   }
 }
+

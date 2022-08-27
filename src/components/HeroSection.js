@@ -20,7 +20,7 @@ function HeroSection() {
             border: "1px solid #fff",
             fontSize: "20px",
             transition: "all 0.3s ease-out",
-            zIndex: 9,
+            zIndex: 6,
             position: "relative",
           }}
           onClick={() => history.push("/register")}
@@ -37,7 +37,7 @@ function HeroSection() {
             border: "1px solid #fff",
             fontSize: "20px",
             transition: "all 0.3s ease-out",
-            zIndex: 9,
+            zIndex: 6,
             position: "relative",
           }}
           onClick={() => history.push("/contact")}
@@ -51,7 +51,8 @@ function HeroSection() {
           "CONSULTANCY SERVICES",
           "DATA SERVICES",
           "TRAINING SERVICES",
-          "OTHER SERVICES",
+          "RESEARCH SERVICES",
+          "TECHNOLOGY SERVICES",
         ]}
         typeSpeed={150}
         backSpeed={150}

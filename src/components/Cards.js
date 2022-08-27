@@ -25,21 +25,21 @@ function Cards() {
           <ul className="cards__items">
             <CardItem
               src="images/image8.jpg"
-              text="Training and skills development in many areas of business such as finance, economics and IT"
+              text="Training and skills development in different areas of business to meet your business needs"
               label="Training"
               path="/services"
             />
             <CardItem
               src="images/image4.jpg"
-              text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam corrupti porro quam quos aut tempore."
-              label="Adventure"
-              path="/products"
+              text="Conducting both academic and industrial research with high degree of accuracy."
+              label="Research"
+              path="/services"
             />
             <CardItem
               src="images/image5.jpg"
-              text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam corrupti porro quam quos aut tempore."
-              label="Adrenaline"
-              path="/sign-up"
+              text="Facilitating the use of technology by enterprises and end users through specialized technology-oriented solutions"
+              label="Technology"
+              path="/services"
             />
           </ul>
         </div>
