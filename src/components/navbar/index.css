@@ -6,7 +6,7 @@
     display: flex;
     top: 0;
     position: sticky;
-    z-index: 9;
+    z-index: 999;
     
 }
 
@@ -63,7 +63,7 @@
 
 .left-navlinks input{
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     font-size: large;
     border: 1px solid darkred;
     border-radius: 10px;

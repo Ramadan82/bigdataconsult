@@ -1,0 +1,80 @@
+.main-container{
+    position: relative;
+    background-color: darkred;
+    color: white;
+    height: auto;
+}
+.main-container  main{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.account-header{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    /* border-bottom: 1px solid white; */
+}
+
+.header-image{
+    
+    display: none;
+}
+
+.header-text{
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.main-body{
+    max-width: fit-content;
+    margin: 100px auto
+}
+.header-text2{
+    margin-top: 50px;
+}
+.header-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-body button{
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 50px;
+}
+.main-body h5{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.delete-my-account-container{
+    background-color: darkred;
+    color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/*.................responsive........................*/
+
+@media screen and  (max-width: 950px){
+    
+.header-text2{
+    display: none;
+}
+.header-image{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+}

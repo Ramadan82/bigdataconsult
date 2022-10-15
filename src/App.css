@@ -34,6 +34,9 @@
   border-radius: 8px;
 
 }
+.services-container span{
+  color: darkred;
+}
 article.services{
   grid-column: span 3;
   display: grid;
@@ -124,6 +127,29 @@ article.technology{
 @media (min-width: 900px) {
   .services { grid-template-columns: repeat(3, 1fr); }
 } */
+
+/*....................service..........................*/
+
+.service{
+  position: relative;
+  z-index: 6;
+  max-width: 700px;
+  margin: 50px auto 50px;
+  
+}
+.service h2{
+  text-align: center;
+  color: darkred;
+}
+
+
+/*...................responsive.........................*/
+@media screen and (max-width: 900px) {
+  .service{
+    padding: 20px;
+  }
+}
+
 /*....................About Page.........................*/
 .about-container{
   
@@ -177,3 +203,4 @@ grid-column: span 2;
   height: 100%;
   width: 100%;
  }
+ 

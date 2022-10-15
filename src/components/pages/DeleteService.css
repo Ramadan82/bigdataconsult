@@ -1,0 +1,72 @@
+.delete-service-main-container{
+    height: auto;
+    background-color: darkred;
+    color: white;
+        position: relative;
+        z-index: 10;
+
+}
+.delete-service{
+ background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  display: flex;
+  color: black;
+
+}
+.delete-service div{
+    flex: 1;
+}
+delete-icon{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+ 
+}
+edit-icon{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+ 
+}
+.delete-service-container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+.delete-services-loading{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+   
+}
+.service-types-container h3{
+    text-align: center;
+}
+.back-to-account-container{
+    width: 100%;
+}
+.back-to-account{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.back-to-account-container-myservice{
+    width: 100%;
+}
+.delete-service h5{
+    text-align: center;
+}

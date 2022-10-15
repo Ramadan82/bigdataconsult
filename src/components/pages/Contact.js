@@ -107,7 +107,11 @@ export default function Contact() {
             </form>
 
             <div class="text-center text-md-left">
-              <a class="btn btn-primary" style={{ backgroundColor: "darkred" }}>
+              <a
+                href
+                class="btn btn-primary"
+                style={{ backgroundColor: "darkred" }}
+              >
                 Send
               </a>
             </div>

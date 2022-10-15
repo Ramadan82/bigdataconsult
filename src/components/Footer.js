@@ -1,10 +1,45 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import "./Footer.css";
 // import { Button } from "./Button";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Footer() {
-  const history = useHistory();
+  const form = useRef();
+  const [message, setMessage] = useState(false);
+  const showToastMessage = () => {
+    toast.success("Successuflly subscribed !", {
+      position: toast.POSITION.BOTTOM_RIGHT,
+      zIndex: 10,
+    });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_1B2d3cl",
+        "template_cj650hc",
+        form.current,
+        "PQ79l6vM43pnm1XXl"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setMessage(true);
+          showToastMessage();
+          form.current.reset();
+        },
+
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div
       className="footer-container"
@@ -18,16 +53,17 @@ function Footer() {
           You can unsubscribe at any time.
         </p>
         <div className="input-areas">
-          <form>
+          <form ref={form} onSubmit={sendEmail}>
             <input
               className="footer-input"
               name="email"
-              type="email"
               placeholder="Your Email"
             />
             {/* <Button buttonStyle="btn--outline">Subscribe</Button> */}
             <button
               className="btn"
+              type="submit"
+              value="Send"
               style={{
                 backgroundColor: "transparent",
                 color: "#fff",
@@ -37,11 +73,11 @@ function Footer() {
                 transition: "all 0.3s ease-out",
                 marginBottom: "16px",
               }}
-              onClick={() => history.push("/register")}
             >
               SUBSCRIBE
             </button>
           </form>
+          {message && <ToastContainer />}
         </div>
       </section>
       <div class="footer-links">

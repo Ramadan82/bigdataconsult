@@ -2,9 +2,9 @@ import React from "react";
 import "../App.css";
 import "./HeroSection.css";
 import Typed from "react-typed";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function HeroSection() {
-  let history = useHistory();
+  let navigate = useNavigate();
   return (
     <div className="hero-container">
       {/* <img src="images/image3.jpg" alt="header" /> */}
@@ -23,7 +23,7 @@ function HeroSection() {
             zIndex: 6,
             position: "relative",
           }}
-          onClick={() => history.push("/register")}
+          onClick={() => navigate("/register")}
         >
           GET STARTED
         </button>
@@ -40,7 +40,7 @@ function HeroSection() {
             zIndex: 6,
             position: "relative",
           }}
-          onClick={() => history.push("/contact")}
+          onClick={() => navigate("/contact")}
         >
           CHAT WITH US
         </button>

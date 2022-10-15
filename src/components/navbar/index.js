@@ -5,8 +5,11 @@ import { faSearch, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 const Nav = () => {
+  const { user, dispatch } = useAuthContext();
+  console.log(user);
   const [toggle, setToggle] = useState(false);
   const [screenwidth, setScreenwidth] = useState(window.innerWidth);
 
@@ -22,11 +25,24 @@ const Nav = () => {
     };
   }, []);
 
+  const handleLoginLogout = () => {
+    dispatch({ type: "LOGOUT" });
+  };
+
+  const logstatus = () => {
+    if (user) {
+      return "Logout";
+    }
+    if (!user) {
+      return "Login";
+    }
+  };
+
   return (
     <motion.div
       className="nav-container"
       initial={{ height: 80 }}
-      animate={toggle ? { height: 600, y: 0 } : { height: 80 }}
+      animate={toggle ? { height: user ? 520 : 600, y: 0 } : { height: 80 }}
       transition={{ duration: 0.5 }}
     >
       <div className="logocontainer">
@@ -43,8 +59,9 @@ const Nav = () => {
           <button
             className="hamburger"
             onClick={screenwidth < 900 && toggleNav}
-            animate={toggle ? { z: 360 } : { z: -360 }}
-            transition={{ duration: 3 }}
+            initial={{ opacity: 0 }}
+            animate={toggle && { opacity: 1 }}
+            transition={{ duration: 0.5 }}
           >
             <FontAwesomeIcon
               icon={!toggle ? faBars : faTimes}
@@ -105,19 +122,21 @@ const Nav = () => {
                 About
               </Link>
             </motion.button>
-            <motion.button
-              initial={toggle ? { x: "-100vw" } : { x: 0 }}
-              animate={{ x: 0 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
-              onClick={screenwidth < 900 && toggleNav}
-            >
-              <Link
-                to="/register"
-                style={{ textDecoration: "none", color: "darkred" }}
+            {!user && (
+              <motion.button
+                initial={toggle ? { x: "-100vw" } : { x: 0 }}
+                animate={{ x: 0 }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                onClick={screenwidth < 900 && toggleNav}
               >
-                Register
-              </Link>
-            </motion.button>
+                <Link
+                  to="/register"
+                  style={{ textDecoration: "none", color: "darkred" }}
+                >
+                  Register
+                </Link>
+              </motion.button>
+            )}
             <motion.button
               initial={toggle ? { x: "100vw" } : { x: 0 }}
               animate={{ x: 0 }}
@@ -125,10 +144,11 @@ const Nav = () => {
               onClick={screenwidth < 900 && toggleNav}
             >
               <Link
-                to="/login"
+                to={user ? "/" : "/login"}
                 style={{ textDecoration: "none", color: "darkred" }}
+                onClick={handleLoginLogout}
               >
-                login
+                {logstatus()}
               </Link>
             </motion.button>
           </div>

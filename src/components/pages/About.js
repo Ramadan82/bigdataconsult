@@ -1,10 +1,11 @@
 import React from "react";
 import Services from "./Services";
 import "../../App.css";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div className="about-container">
+    <motion.div className="about-container">
       <div className="about-header">
         <div>
           <h2>About Us</h2>
@@ -19,18 +20,20 @@ const About = () => {
           similique, eligendi nulla eos ipsam nostrum a consequuntur iusto?
           Aperiam ratione nulla veniam dolor voluptatem ducimus soluta
           doloremque pariatur neque odio vitae eum eligendi hic, nihil esse
-          voluptate similique repellat alias quod cumque assumenda molestiae
-          voluptas! Et reprehenderit commodi sequi laborum cumque? Asperiores
-          officiis repudiandae animi fuga. Minima hic molestiae neque
-          dignissimos ea delectus deleniti temporibus! Voluptate dolorum
-          aspernatur iste quis facilis nihil pariatur harum dolore? Nesciunt
-          adipisci voluptatibus sed nam quis veniam.
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
+          illo fugiat culpa voluptate, veniam dolores error maxime, deserunt
+          vitae autem eveniet molestiae, consequatur amet voluptates placeat
+          quidem quo odio optio fugit labore tempore. Vitae saepe, esse laborum
+          rerum totam explicabo similique! Tempora, id. Reprehenderit sequi
+          autem repellendus! Harum, doloribus earum.
         </p>
 
         <img src="images/about.jpg" alt="about img" />
       </div>
       <Services />
-    </div>
+    </motion.div>
   );
 };
 
