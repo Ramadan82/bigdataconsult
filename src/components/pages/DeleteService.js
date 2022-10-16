@@ -46,11 +46,14 @@ const DeleteService = () => {
   useEffect(() => {
     const fetchServices = async () => {
       setIsLoading(true);
-      const response = await fetch("/services", {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        "https://bigdataconsult.herokuapp.com/services",
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       const json = await response.json();
       if (response.ok) {
         json.length > 0 && setHasService(true);
@@ -139,12 +142,16 @@ const DeleteService = () => {
                     createdAt,
                   } = serv;
                   const handleClick = async (e) => {
-                    const response = await fetch("/services/" + serv._id, {
-                      method: "DELETE",
-                      headers: {
-                        Authorization: `Bearer ${user.token}`,
-                      },
-                    });
+                    const response = await fetch(
+                      "https://bigdataconsult.herokuapp.com/services/" +
+                        serv._id,
+                      {
+                        method: "DELETE",
+                        headers: {
+                          Authorization: `Bearer ${user.token}`,
+                        },
+                      }
+                    );
                     const json = await response.json();
                     if (response.ok) {
                       setService({

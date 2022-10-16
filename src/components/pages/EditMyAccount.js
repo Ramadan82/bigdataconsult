@@ -11,6 +11,7 @@ import {
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import { useAuthContext } from "../../hooks/useAuthContext";
+import { useNavigate } from "react-router-dom";
 
 function EditMyAccount() {
   const { user } = useAuthContext();
@@ -27,14 +28,18 @@ function EditMyAccount() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [userDetail, setUserDetail] = useState(null);
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchUser = async () => {
       setIsLoading(true);
-      const response = await fetch("/user/" + user.token, {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        "https://bigdataconsult.herokuapp.com/user/" + user.token,
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       const json = await response.json();
       if (response.ok) {
         setUserDetail(json);
@@ -81,6 +86,7 @@ function EditMyAccount() {
     }
     if (response.ok) {
       setIsLoading(false);
+      navigate("/login");
     }
   };
   return (

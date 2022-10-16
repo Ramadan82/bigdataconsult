@@ -36,8 +36,8 @@ const DeleteMyAccount = () => {
     setToggle(!toggle);
   };
   const handleDeleteAccount = async (e) => {
-    const response = await fetch(
-      "https://bigdataconsult.herokuapp.com/user/" + user.token,
+    const deleteAllServicesResponse = await fetch(
+      "https://bigdataconsult.herokuapp.com/services/services",
       {
         method: "DELETE",
 
@@ -46,12 +46,23 @@ const DeleteMyAccount = () => {
         },
       }
     );
+    if (deleteAllServicesResponse.ok) {
+      const response = await fetch(
+        "https://bigdataconsult.herokuapp.com/services/user/" + user.token,
+        {
+          method: "DELETE",
 
-    if (response.ok) {
-      dispatch({ type: "LOGOUT" });
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
+
+      if (response.ok) {
+        dispatch({ type: "LOGOUT" });
+      }
     }
   };
-
   return (
     <div className="main-container">
       {user && (
