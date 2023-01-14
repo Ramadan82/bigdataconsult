@@ -117,9 +117,10 @@ function App() {
           <Route path="/register" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
+          <Route path="/:id" element={<Service />} />
           <Route element={<ProtectedRoute />}>
             <Route path="/account" element={<Account />} />
-            <Route path="/:id" element={<Service />} />
+
             <Route
               path="/category"
               element={
